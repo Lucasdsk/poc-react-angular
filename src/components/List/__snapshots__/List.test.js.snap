@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> Render Component 1`] = `
+<styled.div>
+  <ul
+    className="list"
+  >
+    <li
+      className="list__item"
+      key="1"
+    >
+      <div
+        className="list__item__data"
+      >
+        <div>
+          Test
+        </div>
+        <div>
+          20
+        </div>
+        <div>
+          test@ambev.com.br
+        </div>
+      </div>
+      <span
+        className="list__item__remove-item"
+        onClick={[Function]}
+      >
+        x
+      </span>
+    </li>
+    <li
+      className="list__item"
+      key="2"
+    >
+      <div
+        className="list__item__data"
+      >
+        <div>
+          Test1
+        </div>
+        <div>
+          21
+        </div>
+        <div>
+          test1@ambev.com.br
+        </div>
+      </div>
+      <span
+        className="list__item__remove-item"
+        onClick={[Function]}
+      >
+        x
+      </span>
+    </li>
+  </ul>
+</styled.div>
+`;

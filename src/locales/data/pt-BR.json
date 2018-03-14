@@ -1,0 +1,29 @@
+{
+  "pt-BR": {
+    "home": {
+      "mainText": "Olá, seja bem vindo!",
+      "addPerson": "Adicionar uma pessoa",
+      "modal": {
+        "title": "Cadastro de pessoa",
+        "form": {
+          "name": "ex.: Juliano Almeida",
+          "age": "ex.: 22",
+          "email": "ex.: juliano.almeida@ambev.com.br"
+        }
+      }
+    },
+    "listing": {
+      "mainText": "Listagem"
+    },
+    "modal": {
+      "actions": {
+        "save": "Salvar",
+        "cancel": "Cancelar"
+      }
+    },
+    "menu": {
+      "home": "Home",
+      "list": "Listagem"
+    }
+  }
+}

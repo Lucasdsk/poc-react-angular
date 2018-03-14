@@ -1,0 +1,29 @@
+{
+  "en-US": {
+    "home": {
+      "mainText": "Hello, Welcome!",
+      "addPerson": "Add a person",
+      "modal": {
+        "title": "Person registration",
+        "form": {
+          "name": "ex.: Juliano Almeida",
+          "age": "ex.: 22",
+          "email": "ex.: juliano.almeida@ambev.com.br"
+        }
+      }
+    },
+    "listing": {
+      "mainText": "Listing"
+    },
+    "modal": {
+      "actions": {
+        "save": "Save",
+        "cancel": "Cancel"
+      }
+    },
+    "menu": {
+      "home": "Home",
+      "list": "Listing"
+    }
+  }
+}
