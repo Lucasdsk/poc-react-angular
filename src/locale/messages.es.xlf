@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="pt" target-language="es" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="home.mainText" datatype="html">
+        <source>Olá, seja bem vindo!</source>
+        <target>¡Hola es bienvenido!</target>
+      </trans-unit>
+      <trans-unit id="home.addPerson" datatype="html">
+        <source>
+          Adicionar uma pessoa
+        </source>
+        <target>Añadir una persona</target>
+      </trans-unit>
+      <trans-unit id="listing.mainText" datatype="html">
+        <source>
+          Listagem
+        </source>
+        <target>Listado</target>
+      </trans-unit>
+      <trans-unit id="menu.home" datatype="html">
+        <source>
+          Home
+        </source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="menu.list" datatype="html">
+        <source>
+          Listagem
+        </source>
+        <target>Listado</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

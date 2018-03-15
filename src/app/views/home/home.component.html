@@ -1,8 +1,14 @@
 
 <div class="home-content">
-  <h3 class="lang-text">Olá, seja bem vindo!</h3>
+  <h3 class="lang-text" i18n="@@home.mainText">Olá, seja bem vindo!</h3>
 
-  <button class="btn-add-item">
+  <button class="btn-add-item" i18n="@@home.addPerson" (click)="open(content)">
     Adicionar uma pessoa
   </button>
+
+  <app-list [items]="personList" (onRemoveItem)="handleRemoveItem($event)"></app-list>
 </div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  MODALLLL
+</ng-template>

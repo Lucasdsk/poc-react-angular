@@ -1,3 +1,14 @@
-<p>
-  list works!
-</p>
+<div class="list-container">
+  <ul *ngIf="items.length" class="list">
+    <li *ngFor="let item of items; let i = index" class="list__item">
+      <div class="list__item__data">
+        <div>{{item.name}}</div>
+        <div>{{item.age}}</div>
+        <div>{{item.email}}</div>
+      </div>
+      <span class="list__item__remove-item" (click)="handleRemoveItem(i)">x</span>
+    </li>
+  </ul>
+
+  <h3 *ngIf="!items.length">Nenhum item cadastrado...</h3>
+</div>

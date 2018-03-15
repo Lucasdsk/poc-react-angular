@@ -1,6 +1,4 @@
 
 <div class="language-selector">
-  <button>pt-BR</button>
-  <button>en-US</button>
-  <button>es-ES</button>
+  <button  *ngFor="let lang of languages" (click)="changeLanguage(lang)">{{lang}}</button>
 </div>

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Item } from '../../views/home/items.model';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
+  @Input() items : Item[] = [];
+  @Output() onRemoveItem = new EventEmitter<number>();
 
-  constructor() { }
-
-  ngOnInit() {
+  handleRemoveItem = (index: number) => {
+    this.onRemoveItem.emit(index);
   }
-
 }
