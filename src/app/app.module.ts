@@ -1,5 +1,6 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, LOCALE_ID } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -26,7 +27,7 @@ import { HomeComponent } from "./views/home/home.component";
     ListingComponent,
     ListComponent
   ],
-  imports: [NgbModule.forRoot(), BrowserModule, AppRoutingModule],
+  imports: [NgbModule.forRoot(), BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     LocalStorageService, // ler novamente o uso
     {

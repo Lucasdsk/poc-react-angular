@@ -6,24 +6,70 @@
         <source>Olá, seja bem vindo!</source>
         <target>Olá, seja bem vindo!</target>
       </trans-unit>
+
       <trans-unit id="home.addPerson" datatype="html">
         <source>
           Adicionar uma pessoa
         </source>
         <target>Adicionar uma pessoa</target>
       </trans-unit>
+
+      <trans-unit id="home.modal.title" datatype="html">
+        <source>
+          Cadastro de pessoa
+        </source>
+        <target>Cadastro de pessoa</target>
+      </trans-unit>
+
+      <trans-unit id="home.modal.form.name" datatype="html">
+        <source>
+          ex.: Juliano Almeida
+        </source>
+        <target>ex.: Juliano Almeida</target>
+      </trans-unit>
+
+      <trans-unit id="home.modal.form.age" datatype="html">
+        <source>
+          ex.: 22
+        </source>
+        <target>ex.: 22</target>
+      </trans-unit>
+
+      <trans-unit id="home.modal.form.email" datatype="html">
+        <source>
+          ex.: juliano.almeida@ambev.com.br
+        </source>
+        <target>ex.: juliano.almeida@ambev.com.br</target>
+      </trans-unit>
+
       <trans-unit id="listing.mainText" datatype="html">
         <source>
           Listagem
         </source>
         <target>Listagem</target>
       </trans-unit>
+
+      <trans-unit id="modal.actions.save" datatype="html">
+        <source>
+          Salvar
+        </source>
+        <target>Save</target>
+      </trans-unit>
+
+      <trans-unit id="modal.actions.cancel" datatype="html">
+        <source>
+          Cancelar
+        </source>
+        <target>Cancel</target>
+      </trans-unit>
+
       <trans-unit id="menu.home" datatype="html">
         <source>
           Home
         </source>
         <target>Home</target>
       </trans-unit>
+
       <trans-unit id="menu.list" datatype="html">
         <source>
           Listagem

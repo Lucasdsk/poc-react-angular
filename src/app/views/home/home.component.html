@@ -10,5 +10,48 @@
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
-  MODALLLL
+  <div class="modal-header">
+    <h4 class="modal-title" i18n="@@home.modal.title">Cadastro de pessoa</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="pessoa.name"
+        i18n-placeholder="@@home.modal.form.name"
+        placeholder="ex.: Juliano Almeida"
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <input
+        type="number"
+        name="age"
+        [(ngModel)]="pessoa.age"
+        i18n-placeholder="@@home.modal.form.age"
+        placeholder="ex.: 22"
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="pessoa.email"
+        i18n-placeholder="@@home.modal.form.email"
+        placeholder="ex.: juliano.almeida@ambev.com.br"
+        class="form-control"
+      >
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" i18n="@@modal.actions.save" (click)="save(content);" >Salvar</button>
+    <button type="button" class="btn btn-secondary" i18n="@@modal.actions.cancel" (click)="c()">Cancelar</button>
+  </div>
 </ng-template>

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Item } from '../../views/home/items.model';
+import { Pessoa } from '@models/pessoa.model';
 
 @Component({
   selector: 'app-list',
@@ -7,7 +7,7 @@ import { Item } from '../../views/home/items.model';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  @Input() items : Item[] = [];
+  @Input() items : Pessoa[] = [];
   @Output() onRemoveItem = new EventEmitter<number>();
 
   handleRemoveItem = (index: number) => {

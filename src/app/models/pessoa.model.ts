@@ -1,6 +1,5 @@
 
-
-export class Item {
+export class Pessoa {
   id: number;
   name: string;
   age: number;

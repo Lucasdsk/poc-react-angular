@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
-import { Item } from "./items.model";
+import { Pessoa } from "@models/pessoa.model";
 
 const MOCK_ITEMS = [
   { name: "Fulano", age: "21", email: "fulano@hbsis.com.br" },
@@ -13,6 +13,7 @@ function generateRandomItems() {
   for (let i = 1; i <= 1000; i++) {
     array.push({
       ...MOCK_ITEMS[Math.floor(MOCK_ITEMS.length * Math.random())],
+
       id: i
     });
   }
@@ -26,21 +27,32 @@ function generateRandomItems() {
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent {
-  personList: Item[] = generateRandomItems() || [];
+  personList: Pessoa[] = generateRandomItems() || [];
+  pessoa: Pessoa = new Pessoa();
+  openedModal: any;
 
   constructor(private modalService: NgbModal) {}
 
-  open = (content) => {
-    this.modalService.open(content).result.then((result) => {
-      console.log('result', result)
-    })
-  }
+  open = content => {
+    this.openedModal = this.modalService.open(content);
+  };
+
+  save = content => {
+    this.personList = [
+      ...this.personList,
+      {
+        ...this.pessoa,
+        id: this.personList[this.personList.length - 1].id + 1
+      }
+    ];
+
+    this.openedModal.close();
+  };
 
   handleRemoveItem = (indexItem: number) => {
-    console.log('handleRemoveItem', indexItem)
     this.personList = [
       ...this.personList.slice(0, indexItem),
       ...this.personList.slice(indexItem + 1)
-    ]
+    ];
   };
 }

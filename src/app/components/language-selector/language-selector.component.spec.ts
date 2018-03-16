@@ -1,6 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LanguageSelectorComponent } from './language-selector.component';
+import { LocalStorageService } from '@services/local-storage.service';
+
+let localStorageServiceStub: Partial<LocalStorageService>;
+localStorageServiceStub = {
+  saveItem: (key, value) => {},
+  getItem: (key) => {},
+  removeItem: (key) => {}
+}
+
 
 describe('LanguageSelectorComponent', () => {
   let component: LanguageSelectorComponent;
@@ -8,7 +17,14 @@ describe('LanguageSelectorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LanguageSelectorComponent ]
+      declarations: [
+        LanguageSelectorComponent
+      ],
+      providers: [
+        {
+          provide: LocalStorageService, useValue: localStorageServiceStub
+        }
+      ]
     })
     .compileComponents();
   }));

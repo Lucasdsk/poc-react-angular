@@ -1,8 +1,11 @@
 
 <nav class="menu">
   <ul>
-    <li *ngFor="let item of items">
-      <a [routerLink]="item.path">{{item.name}}</a>
+    <li>
+      <a routerLink="/home" i18n="@@menu.home">Home</a>
+    </li>
+    <li>
+      <a routerLink="/listing" i18n="@@menu.list">Listagem</a>
     </li>
   </ul>
 </nav>
