@@ -1,10 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Pessoa } from '@models/pessoa.model';
+import { FormsModule } from '@angular/forms';
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({ selector: 'app-list', template: '' })
-class ListStubComponent {}
+class ListStubComponent {
+  @Input() items : Pessoa[] = [];
+  @Output() onRemoveItem = new EventEmitter<number>();
+}
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -14,7 +20,11 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         ListStubComponent,
-        HomeComponent
+        HomeComponent,
+      ],
+      imports: [
+        FormsModule,
+        NgbModule.forRoot()
       ]
     })
     .compileComponents();
@@ -23,6 +33,7 @@ describe('HomeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
+
     fixture.detectChanges();
   });
 
