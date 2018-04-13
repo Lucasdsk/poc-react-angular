@@ -55,7 +55,11 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "flow start": "flow start",
+    "flow stop": "flow stop",
+    "flow status": "flow status",
+    "flow coverage": "flow coverage"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -99,16 +103,28 @@
   },
   "babel": {
     "presets": [
-      "react-app"
-    ]
+      "react-app",
+      "flow"
+    ],
+    "retainLines": true
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "plugins": [
+      "react",
+      "jsx-a11y",
+      "import"
+    ]
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.1",
+    "flow-bin": "^0.69.0",
+    "prettier-eslint": "^8.8.1",
     "redux-devtools": "^3.4.1"
   }
 }

@@ -1,3 +1,4 @@
+// @flow
 import React, { PureComponent, Fragment } from "react";
 import { FormattedMessage } from "react-intl";
 import { Formik } from "formik";
@@ -26,25 +27,34 @@ function generateRandomItems() {
   return array;
 }
 
-class Home extends PureComponent {
-  state = {
+type State = {
+  modalOpened: boolean,
+  personList: Array<any>
+};
+
+type Props = {};
+
+type FormValues = { name: string, age: string, email: string };
+
+class Home extends PureComponent<Props, State> {
+  state: State = {
     modalOpened: false,
     personList: generateRandomItems() || []
   };
 
-  formValues = {
+  formValues: FormValues = {
     name: "",
     age: "",
     email: ""
   };
 
-  handleToggleModal = () => {
+  handleToggleModal = (): void => {
     this.setState(state => ({
       modalOpened: !state.modalOpened
     }));
   };
 
-  handleSubmitForm = (values, { resetForm }) => {
+  handleSubmitForm = (values: FormValues, { resetForm }: any) => {
     this.setState(
       state => ({
         personList: [

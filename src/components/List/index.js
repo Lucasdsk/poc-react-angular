@@ -1,8 +1,9 @@
+/* @flow */
 import React from "react";
 import PropTypes from "prop-types";
 import { StyledList } from "./List.styled";
 
-const List = ({ items = [], onRemoveItem }) => (
+const List = ({ items: array = [], onRemoveItem }) => (
   <StyledList>
     {!!items.length ? (
       <ul className="list">
